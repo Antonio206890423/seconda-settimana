@@ -65,7 +65,7 @@ if(n1 === 8 || n2 === 8 || n1 + n2 === 8 || n1 - n2 === 8){
 
 let a = 20;
 let b = 10;
-let c = 7;
+let c = 30;
 let maggiore = "";
 let minore = "";
 let intermedio = "";

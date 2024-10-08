@@ -62,20 +62,45 @@ if(n1 === 8 || n2 === 8 || n1 + n2 === 8 || n1 - n2 === 8){
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
-let a = 20
-let b = 3
-let c = 10
-let piuGrande, mediano, piuPiccolo
-if(a>b && a>c){
- console.log("piuGrande = a")
+
+let a = 20;
+let b = 10;
+let c = 7;
+let maggiore = "";
+let minore = "";
+let intermedio = "";
+
+if (a > b && a > c) {
+  maggiore = a;
+  if (b > c) {
+    minore = c;
+    intermedio = b;
+  } else {
+    minore = b;
+    intermedio = c;
+  }
 }
-if(b<a && b<c){
-  console.log("piuPiccolo = b")
+if (b > a && b > c) {
+  maggiore = b;
+  if (a > c) {
+    intermedio = a;
+    minore = c;
+  } else {
+    minore = a;
+    intermedio = c;
+  }
 }
-if(c<a && c>b){
-  console.log("mediano = c")
+if (c > a && c > b) {
+  maggiore = c;
+  if (b > a) {
+    intermedio = b;
+    minore = a;
+  } else {
+    minore = b;
+    intermedio = a;
+  }
 }
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("L ordine dei numeri secondo il valore è:" + maggiore + ", " + intermedio + ", " + minore);
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
